@@ -1,0 +1,1 @@
+<134>1 2026-03-04T12:01:22Z opnsense filterlog 41000 - - 100,,,abcd1234,igb0,match,pass,in,4,0x0,,64,54321,0,none,6,tcp,60,192.0.2.15,198.51.100.22,51514,443,0,S,1234567890,,65535,,mss;nop;wscale;nop;nop;sackOK

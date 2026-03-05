@@ -1,0 +1,6 @@
+# Default metadata and sharing controls.
+# Never store secrets, credentials, or environment-specific overrides in this file.
+
+[]
+access = read : [ * ], write : [ admin, sc_admin ]
+export = system
