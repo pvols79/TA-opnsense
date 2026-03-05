@@ -1,0 +1,22 @@
+# Splunk runtime local overrides
+local/
+*/local/
+
+# Package/build artifacts
+*.spl
+*.tgz
+*.zip
+appinspect-report*
+appinspect-results*
+
+# Logs and temporary outputs
+*.log
+!examples/*.log
+logs/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# OS junk
+.DS_Store
