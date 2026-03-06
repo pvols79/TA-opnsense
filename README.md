@@ -2,7 +2,7 @@
 
 **Status: alpha**
 
-TA-opnsense is a Splunk **Technical Add-on (TA)** scaffold focused on ingesting OPNsense logs and progressively normalizing them into CIM-aligned fields. This repository intentionally excludes full app UI wrappers and setup workflows so parsing and field extraction logic can evolve quickly.
+TA-opnsense is a Splunk **Technical Add-on (TA)** focused on ingesting OPNsense logs and progressively normalizing them into CIM-aligned fields. This repository intentionally excludes full app UI wrappers and setup workflows so parsing and field extraction logic can evolve quickly.
 
 ## What this TA does
 
@@ -32,62 +32,9 @@ TA-opnsense is a Splunk **Technical Add-on (TA)** scaffold focused on ingesting 
 3. Restart Splunk:
    - `splunk restart`
 
-> Note: This TA does **not** include `inputs.conf` by design. Configure data inputs in your deployment-managed input apps or Splunk indexer/heavy forwarder configs.
+> Note: You will need to modify the inputs.conf. I am currently using the sysloging feature in OPNsense to send the logs out over UDP:515
 
-## Upgrade instructions
 
-1. Back up any local overrides under `local/`.
-2. Replace app files with the new release contents.
-3. Re-apply validated local overrides if needed.
-4. Restart Splunk.
-5. Verify effective configs and key searches (see `docs/DEV_NOTES.md`).
-
-## Development workflow (Docker)
-
-A simple iterative workflow is to bind-mount this repo into a Splunk container:
-
-```bash
-docker run --name splunk-dev \
-  -e SPLUNK_START_ARGS=--accept-license \
-  -e SPLUNK_PASSWORD='ChangeMeNow!' \
-  -p 8000:8000 -p 8089:8089 \
-  -v "$(pwd)":/opt/splunk/etc/apps/TA-opnsense \
-  splunk/splunk:latest
-```
-
-Recommended loop:
-1. Edit files under `default/`.
-2. Validate with `btool`.
-3. Restart Splunk when parse-time settings change.
-4. Test with sample data and SPL validations.
-
-## btool validation checks
-
-Run these from inside the Splunk environment:
-
-```bash
-$SPLUNK_HOME/bin/splunk btool props list --app=TA-opnsense --debug
-$SPLUNK_HOME/bin/splunk btool transforms list --app=TA-opnsense --debug
-$SPLUNK_HOME/bin/splunk btool app list TA-opnsense --debug
-```
-
-## AppInspect guidance
-
-Run AppInspect before tagging releases and before publishing artifacts:
-
-```bash
-splunk-appinspect inspect TA-opnsense \
-  --mode precert \
-  --included-tags cloud \
-  --output-file appinspect-report.json
-```
-
-When to run:
-- Before each release candidate.
-- After adding new parsing/extraction logic.
-- After metadata/packaging changes.
-
-## Versioning and releases
 
 - This project follows **Semantic Versioning**.
 - Current scaffold version: `0.1.0`.
