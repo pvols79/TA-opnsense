@@ -1,0 +1,92 @@
+join_key,rule_action,rule_desc,rule_interface
+97a4b05767f50fda0c6db9a40db7d47b,block,Block all IPv6,floating
+02f4bab031b57d1e30553ce08e0ec131,block,Default deny / state violation rule,floating
+b477ac1c8f5237a59ee416b9d819ce58,block,block all targeting port 0,floating
+b454844853f2346167ad77449b79ad8e,block,block all targeting port 0,floating
+8b59cf89872747f657c42f9e93dd52e0,block,sshlockout,floating
+27ad7dee30c19305dc0187bf0e87cd4e,block,sshlockout,floating
+add09fc915886757c300419fc2ecc1e6,block,virusprot overload table,floating
+5c68f7d6dd7890451be671df4051464b,block,CrowdSec (IPv4) in,floating
+af604d8fa5e03b471a8ef91be98ddf76,block,CrowdSec (IPv4) out,floating
+ecceafe5ab2d4d90af398aea146c8e6e,block,CrowdSec (IPv6) in,floating
+6ae038a54b3589f44605be84fdbe7e54,block,CrowdSec (IPv6) out,floating
+fae559338f65e11c53669fc3642c93c2,pass,let out anything from firewall host itself,floating
+d2977cb65048cb8b4b276c40f00dacb6,pass,let out anything from firewall host itself (force gw),floating
+0fee1e6f8e0446181f230cea4b72b427,pass,let out anything from firewall host itself (force gw),floating
+56d97e04b8ce723a8524bdda932fe056,pass,allow access to DHCP server,LAN
+ac5d6855f1bc6d537c949fd7ce458587,pass,allow access to DHCP server,LAN
+4071f735e7cf9dcad8b9305970c17911,pass,allow access to DHCP server,LAN
+600d48bc4d9a060084eea027fa54cfdc,pass,allow access to DHCP server,LAN
+0e8cdb22b7059277a934591353ae2214,pass,allow access to DHCP server,LAN
+06e2b143a84862bc38acb6bac5090d14,pass,allow access to DHCP server,LAN
+04bd2bc40ab1391b8ce89ff0fafd1e67,pass,allow access to DHCP server,LAN
+0926e497e454bfe83d715b0d85fdfe3a,pass,allow access to DHCP server,LAN
+60533d555322b9f6a009f71c1c471480,pass,anti-lockout rule,LAN
+01e83daa25c4483dee217a7ecd7c9a88,pass,anti-lockout rule,LAN
+3345e04986bd5750d23b77cbbb21271f,pass,anti-lockout rule,LAN
+ab722b89801150f6eadce779526a8404,pass,FriendCraft SVC NAT Rule 24454,"LAN,WAN_ATT"
+d7f0ce71f3731951adccfea7995117e5,pass,AMP HTTPS (admin.friendcraft.club),"LAN,WAN_ATT"
+059b19d432945494adc30bcd9eb92961,pass,AMP HTTP,"LAN,WAN_ATT"
+137828fd0f4f375b850083d09363ac11,pass,Docker quillofphil HTTP,"LAN,WAN_ATT"
+df298f19b4dc9141533d0212e106ceac,pass,Docker quillofphil HTTPS,"LAN,WAN_ATT"
+225934e994fc03b44127cb47df963dbe,pass,AMP Minecraft,"LAN,WAN_ATT"
+cedd2a8656e6a952219ab9e45e1ce0dd,block,IPv6 Deny All,LAN
+80f1448c872a5c39163d02d1890df489,pass,LAN_2_VZW_InternetGW,LAN
+2e806d263b179d3858020fdf0abb6b1e,pass,LAN_IOT_ICMP,LAN
+657a0668030aa4299b041e1f23287934,pass,LAN_DNS,LAN
+0850ff24e9fe16d2c338a80ec47bb3af,pass,LAN_NTP,LAN
+c3c4a98aff7142e9fa99f059abcfd51a,pass,LAN to CAMS,LAN
+d718cd34bfddf9cd6e8c4f0694936693,pass,LAN_MEDIA_mDNS,LAN
+6b759a829e684e446cc9cd2df0ac54b1,pass,LAN_UDP_BROADCAST_RELAY,LAN
+3fa7e373437e751b6348e00b64654ea1,pass,LAN_TO_ROKUS,LAN
+7d6632f559f5b3a9976d36f3a31c7047,pass,Default allow LAN to Inet,LAN
+d45c0e1b854741be1ab2bc0da98c7bde,pass,LAN to VPN,LAN
+15d30d1c554a6c212346b1bb37eaf8f1,pass,LAN_2_ATT_ResidentialGW,LAN
+6ac77fe29668d3d947328d690f3514db,pass,LAN Minecraft hairpin,LAN
+053f0281c8328ad53c8004a4585885b8,pass,LAN to VZW GATEWAY,LAN
+4da5f2b05e69bfb95813ad594e20d0c1,pass,LAN2IOT_RADIO,LAN
+b7cd97a164650b538506fb551a0369e7,block,Block bogon IPv4 networks from WAN_ATT,WAN_ATT
+70725fbba63a3c1025e99a42b6d00873,pass,VPN access,WAN_ATT
+eb500c5415b8000071fe20bf27fd3767,pass,Monero P2P,WAN_ATT
+d7bdd9ca9c7c12e80c061f9e168c8005,pass,P2Pool P2P network,WAN_ATT
+73c0defcd3ee6e8eca90c7b6a7120ef9,pass,allow DHCP client on WAN_VZW,WAN_VZW
+bdb423230090a6bf6161cb976e44fa81,pass,allow DHCP client on WAN_VZW,WAN_VZW
+b7742298e96ac942013f7c8069844c9e,block,Block bogon IPv4 networks from WAN_VZW,WAN_VZW
+0925e2cf287d76562ca251ea62851b5f,pass,allow access to DHCP server,VLAN_IOT
+eed764c32048c9fec0b41d2206a3c608,pass,allow access to DHCP server,VLAN_IOT
+c67ab6b64c4cd181b92c19501436c8d7,pass,allow access to DHCP server,VLAN_IOT
+1f03dfdbd97a6675c4a595d43cedced1,pass,allow access to DHCP server,VLAN_IOT
+35f9eddceb38c62af0a9067316776d82,pass,allow access to DHCP server,VLAN_IOT
+313a89c1292547cc87164fdd11652fb5,pass,allow access to DHCP server,VLAN_IOT
+d587ab9b3d41c2de3de74326f2da1619,pass,allow access to DHCP server,VLAN_IOT
+1a303d0412f131cdde78167cf1a5606d,pass,allow access to DHCP server,VLAN_IOT
+5f53b69bbeb79e33fffe73f234b46650,pass,VLAN_IOT_DNS,VLAN_IOT
+7cbb35c0039a55210d6b44ea145aa0d6,pass,VLAN_IOT_NTP,VLAN_IOT
+1b8ac87bed8a4f881b2ad0157844ad80,pass,VLAN_IOT_mDNS,VLAN_IOT
+96c31e478b3c65f8ba4a36cd5c7dd2e9,pass,VLAN_IOT_Internet,VLAN_IOT
+23eeefd19e2d600419b8f78f3a81ee19,pass,allow access to DHCP server,VLAN_CAMS
+8da42b0fbc49f84156d1ce1ca9c6fd75,pass,allow access to DHCP server,VLAN_CAMS
+98bb97a0d64e367bbe72d2ecbdaf0fb0,pass,allow access to DHCP server,VLAN_CAMS
+0df2991e866602a6d2da07b98a976e2e,pass,allow access to DHCP server,VLAN_CAMS
+e087a03ca6de7671c773d13d7e977262,pass,allow access to DHCP server,VLAN_CAMS
+4049e9978d1aa1f70fe7bd514ab06f0d,pass,allow access to DHCP server,VLAN_CAMS
+9e8786dfbaf4d87f96d3733b5073b049,pass,allow access to DHCP server,VLAN_CAMS
+952f88fe5d0f27a6512a8422b6e8ce8f,pass,allow access to DHCP server,VLAN_CAMS
+2404a71ad1a5479170f896747f9d6d64,pass,VLANCAM_TO_TV,VLAN_CAMS
+20e2960c7212453b573f227bc481cfc9,pass,HA_to_IOT_VLAN,VLAN_CAMS
+bcdfb6490e0d601380bf8b51f6756489,pass,VLAN_CAMS_DNS,VLAN_CAMS
+39de611d2103d6c9b7ba6c6500c1fc92,pass,VLAN_CAMS_NTP,VLAN_CAMS
+9f8e8807a9aa5a577d95dbaa8cfb1e2e,pass,VLAN_CAMS_Internet,VLAN_CAMS
+lockout_2,rdr,OPNsense Rule,lan
+lockout_1,rdr,OPNsense Rule,lan
+lockout_0,rdr,OPNsense Rule,lan
+9ca5fe65-70a0-489a-a4be-649ee9dca24d,rdr,OPNsense Rule,"lan,wan"
+374ebe55-8f6c-4b31-93ae-56fe9fc4d63d,rdr,OPNsense Rule,"lan,openvpn,opt3,opt6"
+30355a13-40d0-42cc-a68b-1535a822e630,rdr,OPNsense Rule,"lan,openvpn,opt3,opt6"
+c4466ddd-99a6-4910-a558-6aa04a6450e0,rdr,OPNsense Rule,"lan,wan"
+0979d31b-9084-4e84-b2d4-541490381431,rdr,OPNsense Rule,"lan,wan"
+c2874384-af48-4000-8b7a-11f38bf2554d,rdr,OPNsense Rule,"lan,wan"
+f1c7c57e-5804-46d9-a248-6236f23588a4,rdr,OPNsense Rule,"lan,wan"
+f53738cb-b33c-4cfb-a8e0-f843b3a5eb16,rdr,OPNsense Rule,"lan,wan"
+ed516f08-9a97-4eec-b794-41807d9875d2,rdr,OPNsense Rule,wan
+8c4d90fc-2bd3-4858-861c-48b01e46d862,rdr,OPNsense Rule,wan
